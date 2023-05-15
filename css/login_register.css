@@ -1,0 +1,56 @@
+
+
+
+form{
+    width:25%;
+   
+   border:5px solid;
+   border-radius: 10px; 
+   padding:30px;
+   
+   background-image:linear-gradient(black,grey);
+   
+
+   position:absolute;
+   top:50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+
+   display: grid;
+
+   text-align: center;
+   
+   
+}
+
+
+
+form h2{
+    color:tomato;
+    margin-bottom:20px;
+    font-size: 50px;
+    letter-spacing: 3px;
+    
+}
+
+input{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+ }
+
+ input[type=submit]{
+    font-size: 30px;
+    margin-top: 20px;
+    background-color:tomato;
+    letter-spacing: 2px;
+    
+ }
+
+ input[type=submit]:hover{
+    
+    opacity: 0.8;
+ }
+
