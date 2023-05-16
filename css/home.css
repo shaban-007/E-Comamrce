@@ -1,0 +1,47 @@
+.container{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.slider{
+    width:50%;
+    margin:auto;
+    text-align: center;
+}
+
+
+.best-sales{
+    display: inline-flex;
+    
+}
+
+.product{
+    margin: 10px;
+}
+
+.product img{
+    width:100px;
+    height:100px;
+}
+
+.products-catgories{
+    
+    display:flex;
+
+}
+
+.products-catgories a{
+    margin:20px;
+}
+
+.products-catgories img{
+    width:200px;
+    height:200px;
+}
+
+button img{
+    width:50px;
+}
+
