@@ -35,4 +35,27 @@ document.addEventListener('DOMContentLoaded', function() {
                     parentElement.removeChild(errorElement);
                 }
             }
-            })();
+            });
+            
+
+            function addData(){
+
+            var thisname = document.getElementById("name").value;
+            var thisemail = document.getElementById("email").value;
+            var thispassword = document.getElementById("password").value;
+
+            var registrationData = {
+                username: thisname,
+                password: thispassword,
+                email:thisemail,
+                // other registration fields...
+              };
+              
+              // Convert the registration data to JSON string
+              var registrationDataJSON = JSON.stringify(registrationData);
+              
+              // Save the registration data to Local Storage
+              localStorage.setItem("registrationData", registrationDataJSON);
+
+            }
+             

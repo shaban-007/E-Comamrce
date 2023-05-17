@@ -7,19 +7,18 @@
     <meta name="description" content="Shopping online">
     <title>Login Page</title>
 
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/login_register.css">
+    <link rel="stylesheet" href="login_register.css">
 
 </head>
 
 <body>
     <header>
-        <a id="logo" href="home.html">Online Shop</a>
-
+        <h1>E-commarce</h1>
         <nav>
-            <a href="register.html">Register</a>
+            <a href="..\Registration\Registration.html">Registration</a>
+            <a>|</a>
             <a href="login.html">Login</a>
-        </nav>
+          </nav>
 
     </header>
 
@@ -27,12 +26,12 @@
 
         <form>
             <h2>Login</h2>
-            <input type="text" placeholder="Enter Username">
-            <input type="password" placeholder="Enter Password">
-
-            <input type="submit" value="Sign in">
+            <input type="text" placeholder="Enter Username" id="name">
+            <input type="password" placeholder="Enter Password" id="password" required>
+            <input type="" value="Sign in" onclick="check()">
         </form>
 
     </section>
+    <script src="login.js"></script>
 </body>
 </html>
