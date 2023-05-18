@@ -58,4 +58,4 @@ document.addEventListener('DOMContentLoaded', function() {
               localStorage.setItem("registrationData", registrationDataJSON);
 
             }
-             
+            
