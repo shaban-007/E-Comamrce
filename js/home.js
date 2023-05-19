@@ -14,7 +14,6 @@ sliderButton[1].onclick=()=>{
     {
         MarginLeft-=340;
         product[0].style.marginLeft=MarginLeft+"px";
-        console.log(MarginLeft);
     }
     
 }
@@ -25,7 +24,6 @@ sliderButton[0].onclick=()=>{
     {
         MarginLeft+=340;
         product[0].style.marginLeft=MarginLeft+"px";
-        console.log(MarginLeft);
     }
     
 }
