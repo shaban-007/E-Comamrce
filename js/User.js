@@ -18,6 +18,7 @@ nameContainer.textContent = storedRegistrationDataJSON[storedUserNumDataJSON].us
     var nameInput = document.getElementById('name');
     var emailInput = document.getElementById('email');
     var passwordInput = document.getElementById('password');
+    
 
     nameInput.value = storedRegistrationDataJSON[storedUserNumDataJSON].username;
     emailInput.value = storedRegistrationDataJSON[storedUserNumDataJSON].email;
@@ -43,9 +44,13 @@ nameContainer.textContent = storedRegistrationDataJSON[storedUserNumDataJSON].us
 
 
         location.reload();
-
-
-
-
         
+    }
+
+
+    function out(){
+
+        window.location.href = "login.html";
+
+
     }

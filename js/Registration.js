@@ -48,6 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
             var thisname = document.getElementById("name").value;
             var thisemail = document.getElementById("email").value;
             var thispassword = document.getElementById("password").value;
+            var thisgender = document.getElementById("password").value;
+            var thisbirthdate = document.getElementById("password").value;
             var existingData = JSON.parse(localStorage.getItem('registrationData')) || [];
             console.log(existingData)
 
@@ -56,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 username: thisname,
                 password: thispassword,
                 email:thisemail,
+                gendeer:thisgender,
+                birthdate:thisbirthdate
                 // other registration fields...
               };
               existingData.push(registrationData);
