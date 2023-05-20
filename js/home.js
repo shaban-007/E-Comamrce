@@ -130,13 +130,6 @@ for (var i = 0; i < navLinks.length; i++) {
         const categoriesContainer = document.getElementById('categories');
         let currentRow;
     
-<<<<<<< HEAD
-    if(MarginLeft>maxMarginLeft)
-    {
-        MarginLeft-=340;
-        product[0].style.marginLeft=MarginLeft+"px";
-    }
-=======
         // Loop through the data and generate carts
         data.forEach((item, index) => {
           if (index % 3 === 0) {
@@ -144,24 +137,15 @@ for (var i = 0; i < navLinks.length; i++) {
             currentRow.classList.add('row');
             categoriesContainer.appendChild(currentRow);
           }
->>>>>>> 9e980af7fab7f74dd3734f0277789c49f31af661
     
           const category = item.category;
           const picture = item.image;
           const description = item.description;
           const price = item.price;
     
-<<<<<<< HEAD
-    if(MarginLeft<0)
-    {
-        MarginLeft+=340;
-        product[0].style.marginLeft=MarginLeft+"px";
-    }
-=======
           // Create the cart element
           const cart = document.createElement('div');
           cart.classList.add('cart');
->>>>>>> 9e980af7fab7f74dd3734f0277789c49f31af661
     
           // Create the cart content
           const cartContent = `
