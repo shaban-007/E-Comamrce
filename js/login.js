@@ -26,17 +26,17 @@ if (storedRegistrationDataJSON) {
     }
   }
  
-
-  // Compare the stored registration data with user's entered credentials
-  if (
-    storedRegistrationData.username === name &&
-    storedRegistrationData.password === password
-  ) {
-    window.location.href = "home.html";
-  } else {
-    console.log("Not Ok")
-  }
-} else {
-  // No registration data found in Local Storage
-  // User needs to register first or handle the scenario accordingly
 }}
+//   // Compare the stored registration data with user's entered credentials
+//   if (
+//     storedRegistrationData.username === name &&
+//     storedRegistrationData.password === password
+//   ) {
+//     window.location.href = "home.html";
+//   } else {
+//     console.log("Not Ok")
+//   }
+// } else {
+//   // No registration data found in Local Storage
+//   // User needs to register first or handle the scenario accordingly
+// }}
