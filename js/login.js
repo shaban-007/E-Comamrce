@@ -22,21 +22,15 @@ if (storedRegistrationDataJSON) {
       
       localStorage.setItem("currentuser", currentuser);
 
+      let expiryDate = new Date();
+    expiryDate.setMonth(expiryDate.getMonth() + 1);
+
+    document.cookie="username="+name+";expires="+expiryDate+';'
+    document.cookie="password="+password+";expires="+expiryDate+';'
+
+      console.log(document.cookie)
       window.location.href = "home.html";
     }
   }
- 
-}}
-//   // Compare the stored registration data with user's entered credentials
-//   if (
-//     storedRegistrationData.username === name &&
-//     storedRegistrationData.password === password
-//   ) {
-//     window.location.href = "home.html";
-//   } else {
-//     console.log("Not Ok")
-//   }
-// } else {
-//   // No registration data found in Local Storage
-//   // User needs to register first or handle the scenario accordingly
-// }}
+}
+}
