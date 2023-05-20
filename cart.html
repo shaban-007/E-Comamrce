@@ -1,115 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shopping online">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Shopping online" />
     <title>Cart Page</title>
 
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/cart.css" />
+  </head>
 
-</head>
-
-<body>
-
-    <header>
-        <a id="logo" href="home.html">Online Shop</a>
-
-        <nav>
-            <a href="register.html">Register</a>
-            <a href="login.html">Login</a>
-        </nav>
-
+  <body>
+    <header id="nav-wrapper">
+      <nav id="nav">
+        <div class="nav left">
+          <span class="gradient skew"
+            ><h1 class="logo un-skew"><a href="#home">E-Commarce</a></h1></span
+          >
+          <button id="menu" class="btn-nav">
+            <span class="fas fa-bars"></span>
+          </button>
+        </div>
+        <div class="nav right">
+          <a href="#home" class="nav-link active"
+            ><span class="nav-link-span"
+              ><span class="u-nav">Home</span></span
+            ></a
+          >
+          <a href="#Products" class="nav-link" onclick="scrollToProduct()"
+            ><span class="nav-link-span"
+              ><span class="u-nav">Products</span></span
+            ></a
+          >
+          <a href="#cart" class="nav-link"
+            ><span class="nav-link-span"
+              ><span class="u-nav">cart</span></span
+            ></a
+          >
+          <a href="About.html" class="nav-link"
+            ><span class="nav-link-span"
+              ><span class="u-nav">About</span></span
+            ></a
+          >
+          <a href="#Hamza" class="nav-link"
+            ><span class="nav-link-span"
+              ><span class="u-nav">Hamza</span></span
+            ></a
+          >
+        </div>
+      </nav>
     </header>
 
     <section>
-        <div class="container">
-
-            <div id="cart-products">
-                    <div class="product">
-                        <img src="images/laptop1.jpg">
-                        <div class="product-info">
-                            <p>
-                                <b>Laptop1</b>
-                                <small>Dell Vostro 3510 15.6" FHD Business Laptop, 11th Generation Intel Core i7-1165G7, Windows 10 Pro, 16GB RAM 512GB SSD, WiFi, Bluetooth, Webcam, HDMI</small>
-                            </p>
-                            <samp>1000$</samp>
-                        </div>
-                        <button class="remove-from-cart">Remove from Cart</button>
-                    </div>
-
-                    <div class="product">
-                        <img src="images/laptop2.jpg">
-                        <div class="product-info">
-                            <p>
-                                <b>Laptop2</b>
-                                <small>New arrival</small>
-                            </p>
-                            <samp>900$</samp>
-                        </div>
-                        <button class="remove-from-cart">Remove from Cart</button>
-                    </div>
-
-                    <div class="product">
-                        <img src="images/laptop3.jpg">
-                        <div class="product-info">
-                            <p>
-                                <b>Laptop3</b>
-                                <small>New arrival</small>
-                            </p>
-                            <samp>800$</samp>
-                        </div>
-                        <button class="remove-from-cart">Remove from Cart</button>
-                    </div>
-
-                    <div class="product">
-                        <img src="images/laptop4.jpg">
-                        <div class="product-info">
-                            <p>
-                                <b>Laptop4</b>
-                                <small>New arrival</small>
-                            </p>
-                            <samp>900$</samp>
-                        </div>
-                        <button class="remove-from-cart">Remove from Cart</button>
-                    </div>
-
-                    <div class="product">
-                        <img src="images/laptop5.jpg">
-                        <div class="product-info">
-                            <p>
-                                <b>Laptop5</b>
-                                <small>New arrival</small>
-                            </p>
-                            <samp>1500$</samp>
-                        </div>
-                        <button class="remove-from-cart">Remove from Cart</button>
-                    </div>
-
-                    <div class="product">
-                        <img src="images/laptop6.jpg">
-                        <div class="product-info">
-                            <p>
-                                <b>Laptop6</b>
-                                <small>New arrival</small>
-                            </p>
-                            <samp>1500$</samp>
-                        </div>
-                        <button class="remove-from-cart">Remove from Cart</button>
-                    </div>
-            </div>
-
-            <div id="total-amount">
-                <h2>Total amount is:</h2>
-                <h3>300$</h3>
-                <button id="buy">Buy</button>
-            </div>
+      <div class="container">
+        <div id="cart-header">
+          <h3 class="heading">Shopping Cart</h3>
+          <button id="remove-all">Remove all</button>
         </div>
 
+        <div id="cart-products">
+          <div class="product">
+            <img src="images/laptop1.jpg" />
+            <div class="product-info">
+              <p>
+                <b>Laptop1</b>
+                <small>Dell Vostro 3510 15.6" </small>
+              </p>
+              <div class="counter">
+                <button class="counter-btn">+</button>
+                <div class="count">2</div>
+                <button class="counter-btn">-</button>
+              </div>
+              <div class="price">
+                <div class="amount">$2.99</div>
+                <button class="save"><u>Save for later</u></button>
+                <button class="remove"><u>Remove</u></button>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+          <div class="checkout">
+            <div class="total">
+              <div>
+                <div class="Subtotal">Sub-Total</div>
+                <div class="items">2 items</div>
+              </div>
+              <div class="total-amount">$6.18</div>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+          </div>
+
+          
+      </div>
     </section>
-
-    <script src=""></script>
-
-</body>
+  </body>
 </html>
