@@ -49,8 +49,15 @@ function products(){
 }
 
 
-var storedRegistrationDataJSON = localStorage.getItem("registrationData");
-var nameContainer = document.getElementById("name-container");
-var storedRegistrationData = JSON.parse(storedRegistrationDataJSON);
 
-nameContainer.textContent = storedRegistrationData.username;
+var storedUserNumDataJSON = localStorage.getItem("currentuser");
+// var storedRegistrationDataJSON = localStorage.getItem("registrationData");
+var storedRegistrationDataJSON = JSON.parse(localStorage.getItem('registrationData'));
+
+var nameContainer = document.getElementById("name-container");
+// var storedRegistrationData = JSON.parse(storedRegistrationDataJSON);
+
+
+
+
+nameContainer.textContent = storedRegistrationDataJSON[storedUserNumDataJSON].username;

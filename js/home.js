@@ -122,50 +122,101 @@ for (var i = 0; i < navLinks.length; i++) {
     // }
     const apiUrl = 'https://fakestoreapi.com/products/'; // Replace with your API endpoint
 
-    // Fetch data from the API
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        // console.log(data)
-        const categoriesContainer = document.getElementById('categories');
-        let currentRow;
+// Initialize cart array
+
+var cartItems = JSON.parse(localStorage.getItem('carts')) || [];
+// Fetch data from the API
+fetch(apiUrl)
+  .then(response => response.json())
+  .then(data => {
+    const categoriesContainer = document.getElementById('categories');
+    let currentRow;
     
-        // Loop through the data and generate carts
-        data.forEach((item, index) => {
-          if (index % 3 === 0) {
-            currentRow = document.createElement('div');
-            currentRow.classList.add('row');
-            categoriesContainer.appendChild(currentRow);
-          }
-    
-          const category = item.category;
-          const picture = item.image;
-          const description = item.description;
-          const price = item.price;
-    
-          // Create the cart element
-          const cart = document.createElement('div');
-          cart.classList.add('cart');
-    
-          // Create the cart content
-          const cartContent = `
-            <img src="${picture}" alt="${category}">
-            <h3>${category}</h3>
-            <p>${description}</p>
-            <p>Price: $${price}</p>
-            <button class="add-to-cart">Add to Cart</button>
-          `;
-    
-          // Set the cart content
-          cart.innerHTML = cartContent;
-    
-          // Append the cart to the current row
-          currentRow.appendChild(cart);
-        });
-      })
-      .catch(error => {
-        console.error('Error:', error);
+
+    // Loop through the data and generate carts
+    data.forEach((item, index) => {
+      if (index % 3 === 0) {
+        currentRow = document.createElement('div');
+        currentRow.classList.add('row');
+        categoriesContainer.appendChild(currentRow);
+      }
+      const id = item.id;
+      const category = item.category;
+      const picture = item.image;
+      const description = item.description;
+      const price = item.price;
+
+
+      // Create the cart element
+      const cart = document.createElement('div');
+      cart.classList.add('cart');
+
+      // Create the cart content
+      const cartContent = `
+        <img src="${picture}" alt="${category}">
+        <h3>${category}</h3>
+        <p>${description}</p>
+        <p>Price: $${price}</p>
+        <button class="add-to-cart">Add to Cart</button>
+      `;
+
+      // Set the cart content
+      cart.innerHTML = cartContent;
+
+      // Add event listener to the "Add to Cart" button
+      const addToCartButton = cart.querySelector('.add-to-cart');
+      addToCartButton.addEventListener('click', () => {
+        const product = {
+          id: id ,
+          category: category,
+          picture: picture,
+          description: description,
+          price: price
+        };
+        addToCart(product);
       });
+
+      // Append the cart to the current row
+      currentRow.appendChild(cart);
+    });
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
+// Function to add item to cart array
+function addToCart(product) {
+  let add=false;
+  for(let i = 0 ; i<cartItems.length ; i++){
+    if(cartItems[i].id === product.id){
+      add=true;
+    }
+  }
+  if(add===false){
+  cartItems.push(product);}
+  localStorage.setItem('data', JSON.stringify(cartItems));
+  console.log('Added to cart:', cartItems);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
 
 
 
@@ -179,11 +230,16 @@ for (var i = 0; i < navLinks.length; i++) {
 
 
 
-      var storedRegistrationDataJSON = localStorage.getItem("registrationData");
+      var storedUserNumDataJSON = localStorage.getItem("currentuser");
+      // var storedRegistrationDataJSON = localStorage.getItem("registrationData");
+      var storedRegistrationDataJSON = JSON.parse(localStorage.getItem('registrationData'));
+
       var nameContainer = document.getElementById("name-container");
-      var storedRegistrationData = JSON.parse(storedRegistrationDataJSON);
+      // var storedRegistrationData = JSON.parse(storedRegistrationDataJSON);
+      
+      
 
 
-      nameContainer.textContent = storedRegistrationData.username;
+      nameContainer.textContent = storedRegistrationDataJSON[storedUserNumDataJSON].username;
 
 

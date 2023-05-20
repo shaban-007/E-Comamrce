@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (passwordInput.value !== confirmPasswordInput.value) {
             showError(confirmPasswordInput, 'Passwords do not match');
         } else {
+            addData()
             // Clear any previous error messages
             clearError(confirmPasswordInput);
 
@@ -36,13 +37,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             });
+
+                    
             
 
+
             function addData(){
+                
 
             var thisname = document.getElementById("name").value;
             var thisemail = document.getElementById("email").value;
             var thispassword = document.getElementById("password").value;
+            var existingData = JSON.parse(localStorage.getItem('registrationData')) || [];
+            console.log(existingData)
+
 
             var registrationData = {
                 username: thisname,
@@ -50,12 +58,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 email:thisemail,
                 // other registration fields...
               };
+              existingData.push(registrationData);
+
               
               // Convert the registration data to JSON string
-              var registrationDataJSON = JSON.stringify(registrationData);
+              //   var registrationDataJSON = JSON.stringify(data);
               
               // Save the registration data to Local Storage
-              localStorage.setItem("registrationData", registrationDataJSON);
+              localStorage.setItem("registrationData", JSON.stringify(existingData));
+              window.location.href = "login.html";
 
             }
+
+
+
+
+
+            // var form = document.getElementById('registration-form');
+
+            // form.addEventListener('submit', function(event) {
+            //     event.preventDefault(); // Prevent form submission
+            //     const passwordInput = document.getElementById('password');
+            //     const confirmPasswordInput = document.getElementById('confirm-password');
+          
+            //     if (passwordInput.value === confirmPasswordInput.value){
+            //     addData();}
+            // });
+          
             

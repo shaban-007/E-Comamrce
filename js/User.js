@@ -1,9 +1,15 @@
 
-var storedRegistrationDataJSON = localStorage.getItem("registrationData");
-var nameContainer = document.getElementById("name-container");
-var storedRegistrationData = JSON.parse(storedRegistrationDataJSON);
+var storedUserNumDataJSON = localStorage.getItem("currentuser");
+// var storedRegistrationDataJSON = localStorage.getItem("registrationData");
+var storedRegistrationDataJSON = JSON.parse(localStorage.getItem('registrationData'));
 
-nameContainer.textContent = storedRegistrationData.username;
+var nameContainer = document.getElementById("name-container");
+// var storedRegistrationData = JSON.parse(storedRegistrationDataJSON);
+
+
+
+
+nameContainer.textContent = storedRegistrationDataJSON[storedUserNumDataJSON].username;
 
 
 
@@ -13,9 +19,9 @@ nameContainer.textContent = storedRegistrationData.username;
     var emailInput = document.getElementById('email');
     var passwordInput = document.getElementById('password');
 
-    nameInput.value = storedRegistrationData.username;
-    emailInput.value = storedRegistrationData.email;
-    passwordInput.value = storedRegistrationData.password;
+    nameInput.value = storedRegistrationDataJSON[storedUserNumDataJSON].username;
+    emailInput.value = storedRegistrationDataJSON[storedUserNumDataJSON].email;
+    passwordInput.value = storedRegistrationDataJSON[storedUserNumDataJSON].password;
 
 
 
@@ -25,15 +31,15 @@ nameContainer.textContent = storedRegistrationData.username;
         var passwordInput = document.getElementById('password').value;
 
 
-        var userData = JSON.parse(localStorage.getItem('registrationData'));
+      
 
         // Modify the name property
-        userData.username = nameInput;
-        userData.email = emailInput;
-        userData.password = passwordInput;
+        storedRegistrationDataJSON[storedUserNumDataJSON].username = nameInput;
+        storedRegistrationDataJSON[storedUserNumDataJSON].email = emailInput;
+        storedRegistrationDataJSON[storedUserNumDataJSON].password = passwordInput;
         
         // Store the updated data back into the local storage
-        localStorage.setItem('registrationData', JSON.stringify(userData));
+        localStorage.setItem('registrationData', JSON.stringify(storedRegistrationDataJSON));
 
 
         location.reload();
