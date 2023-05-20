@@ -10,18 +10,14 @@ var password = document.getElementById("password").value;
 if (storedRegistrationDataJSON) {
   // Convert the stored registration data back to an object
   var storedRegistrationData = JSON.parse(storedRegistrationDataJSON);
-  console.log(name);
-  console.log(password);
-
-  console.log(storedRegistrationData.username);
-  console.log(storedRegistrationData.password);
+ 
 
   // Compare the stored registration data with user's entered credentials
   if (
     storedRegistrationData.username === name &&
     storedRegistrationData.password === password
   ) {
-    console.log("OK")
+    window.location.href = "home.html";
   } else {
     console.log("Not Ok")
   }
