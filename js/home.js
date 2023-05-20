@@ -1,3 +1,70 @@
+// var util = {
+//   mobileMenu() {
+//     $("#nav").toggleClass("nav-visible");
+//   },
+//   windowResize() {
+//     if ($(window).width() > 800) {
+//       $("#nav").removeClass("nav-visible");
+//     }
+//   },
+//   scrollEvent() {
+//     var scrollPosition = $(document).scrollTop();
+    
+//     $.each(util.scrollMenuIds, function(i) {
+//       var link = util.scrollMenuIds[i],
+//           container = $(link).attr("href"),
+//           containerOffset = $(container).offset().top,
+//           containerHeight = $(container).outerHeight(),
+//           containerBottom = containerOffset + containerHeight;
+
+//       if (scrollPosition < containerBottom - 20 && scrollPosition >= containerOffset - 20) {
+//         $(link).addClass("active");
+//       } else {
+//         $(link).removeClass("active");
+//       }
+//     });
+//   }
+// };
+
+// $(document).ready(function() {
+  
+//   util.scrollMenuIds = $("a.nav-link[href]");
+//   $("#menu").click(util.mobileMenu);
+//   $(window).resize(util.windowResize);
+//   $(document).scroll(util.scrollEvent);
+  
+// });
+
+
+
+var navLinks = document.getElementsByClassName("nav-link");
+
+// Add click event listener to each navigation link
+for (var i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", function() {
+    // Remove active class from all navigation links
+    for (var j = 0; j < navLinks.length; j++) {
+      navLinks[j].classList.remove("active");
+    }
+    
+    // Add active class to the clicked navigation link
+    this.classList.add("active");
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Your code here
     let slideIndex = 1;
@@ -59,7 +126,7 @@
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         const categoriesContainer = document.getElementById('categories');
         let currentRow;
     
@@ -109,3 +176,14 @@
         const productSection = document.getElementById('categories');
         productSection.scrollIntoView({ behavior: 'smooth' });
       }
+
+
+
+      var storedRegistrationDataJSON = localStorage.getItem("registrationData");
+      var nameContainer = document.getElementById("name-container");
+      var storedRegistrationData = JSON.parse(storedRegistrationDataJSON);
+
+
+      nameContainer.textContent = storedRegistrationData.username;
+
+

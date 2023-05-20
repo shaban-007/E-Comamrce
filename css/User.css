@@ -1,10 +1,29 @@
-body {
+/*-------------Reset-------------*/
+button {
+    background: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:focus,
+  input:focus {
+    outline: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /*-------------Layout-------------*/
+  body {
     background-color: #993266;
     line-height: 1.5em;
     padding: 0;
     margin: 0;
-   
+    
 
+    
     
     /* justify-content: center;
     justify-items: center; */
@@ -174,114 +193,67 @@ body {
   }
 
 
-  
+
+
+  .form-group {
 
 
 
-
-
-
-
-
-
-
-  .about-section {
-    padding: 50px;
-    text-align: center;
     
-    color: white;
-  }
-
-  
-
-
-
-
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  .column {
-    margin-left: 15%;
-    justify-items: center;
-    float: left;
-    width: 25%;
-    margin-bottom: 16px;
-    padding: 0 8px;
-  }
-  
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
-  }
-  
-  .about-section {
-    padding: 50px;
-    text-align: center;
+    margin-top: 80px;
+    margin-left: 20px;
     
-    color: white;
+    
+
   }
-  
-  .container {
-    padding: 0 16px;
+
+  h1 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
   }
-  
-  .container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
+
+  label {
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
   }
-  
-  .title {
-    text-align: center;
-    color: rgb(255, 255, 255);
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
-  
-  .button {
+
+  button {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #490846;
     border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
+    border-radius: 4px;
     cursor: pointer;
-    width: 90%;
-  }
-  
-  .button:hover {
-    background-color: #555;
-  }
-  
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: block;
-    }
   }
 
+  button:hover {
+    background-color: #000000;
+  }
 
-
-
-.mission{
-  
-  margin: 2em auto;
-  margin-bottom: 0;
-  padding: 50px;
-  width: 60%;
-  background-color: #fff;
-  border-radius: 1%;
-  
-}
-
-
-
-
-
-  
+  button:active {
+    background-color: #1E40AF;
+  }
 
 
   footer {
+
     background-color: #464545;
     padding: 20px;
     text-align: center;
@@ -318,15 +290,13 @@ body {
 
 
   section {
-    
-   
+
     padding: 20px;
     width: 1000px;
     margin-left: 300px;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-
 
 
 

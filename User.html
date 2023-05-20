@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/User.css">
+
+    <title></title>
+</head>
+<body>
+
+    <header id="nav-wrapper">
+        <nav id="nav">
+          <div class="nav left">
+            <span class="gradient skew"><h1 class="logo un-skew"><a href="#home">E-Commarce</a></h1></span>
+            <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
+          </div>
+          <div class="nav right">
+            <a href="#home" class="nav-link"><span class="nav-link-span"><span class="u-nav">Home</span></span></a>
+            <a href="#Products" class="nav-link " onclick="scrollToProduct()"><span class="nav-link-span"><span class="u-nav">Products</span></span></a>
+            <a href="#cart" class="nav-link"><span class="nav-link-span"><span class="u-nav">cart</span></span></a>
+            <a href="About.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">About</span></span></a>
+            <a href="User.html" class="nav-link active"><span class="nav-link-span"><span class="u-nav" id="name-container"> </span></span></a>
+          </div>
+        </nav>
+      </header>
+
+
+      <div class="form-group">
+      <h1>User Information</h1>
+
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email">
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your phone number">
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email">
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your phone number">
+  </div>
+  <button id="saveButton" onclick="change()" type="submit">Save Changes</button>
+  </div>
+
+
+
+  <footer>
+    <div class="team">
+      <h3>Team Members</h3>
+      <ul>
+        <li>
+          <span class="name">Ahmed Shaban</span>
+          <span class="name">|</span>
+          <span class="email">Shaban.dev007@gmail.com</span>
+        </li>
+        <li>
+          <span class="name">Hamza Abdelbaset</span>
+          <span class="name">|</span>
+          <span class="email">hamza.abdelbaset.elgebaly@gmail.com</span>
+        </li>
+       
+      </ul>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2023 ITI. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+    <script src="js/User.js"></script>
+</body>
+</html>
