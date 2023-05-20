@@ -197,8 +197,6 @@ function addToCart(product) {
   cartItems.push(product);}
   localStorage.setItem('data', JSON.stringify(cartItems));
   console.log('Added to cart:', cartItems);
-
-
 }
 
 
