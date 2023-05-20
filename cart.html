@@ -12,87 +12,53 @@
 
   <body>
     <header id="nav-wrapper">
-      <nav id="nav">
-        <div class="nav left">
-          <span class="gradient skew"
-            ><h1 class="logo un-skew"><a href="#home">E-Commarce</a></h1></span
-          >
-          <button id="menu" class="btn-nav">
-            <span class="fas fa-bars"></span>
-          </button>
-        </div>
-        <div class="nav right">
-          <a href="#home" class="nav-link active"
-            ><span class="nav-link-span"
-              ><span class="u-nav">Home</span></span
-            ></a
-          >
-          <a href="#Products" class="nav-link" onclick="scrollToProduct()"
-            ><span class="nav-link-span"
-              ><span class="u-nav">Products</span></span
-            ></a
-          >
-          <a href="#cart" class="nav-link"
-            ><span class="nav-link-span"
-              ><span class="u-nav">cart</span></span
-            ></a
-          >
-          <a href="About.html" class="nav-link"
-            ><span class="nav-link-span"
-              ><span class="u-nav">About</span></span
-            ></a
-          >
-          <a href="#Hamza" class="nav-link"
-            ><span class="nav-link-span"
-              ><span class="u-nav">Hamza</span></span
-            ></a
-          >
-        </div>
-      </nav>
-    </header>
+        <nav id="nav">
+          <div class="nav left">
+            <span class="gradient skew"><h1 class="logo un-skew"><a href="#home">E-Commarce</a></h1></span>
+            <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
+          </div>
+          <div class="nav right">
+            <a href="home.html" class="nav-link "><span class="nav-link-span"><span class="u-nav">Home</span></span></a>
+            <a href="home.html" class="nav-link " onclick=""><span class="nav-link-span"><span class="u-nav">Products</span></span></a>
+            <a href="cart.html" class="nav-link active"><span class="nav-link-span"><span class="u-nav">cart</span></span></a>
+            <a href="About.html" class="nav-link"><span class="nav-link-span"><span class="u-nav">About</span></span></a>
+            <a href="User.html" class="nav-link"><span class="nav-link-span"><span class="u-nav" id="name-container"> </span></span></a>
+          </div>
+        </nav>
+      </header>
+
+
+
+
 
     <section>
-      <div class="container">
-        <div id="cart-header">
-          <h3 class="heading">Shopping Cart</h3>
-          <button id="remove-all">Remove all</button>
-        </div>
-
-        <div id="cart-products">
-          <div class="product">
-            <img src="images/laptop1.jpg" />
-            <div class="product-info">
-              <p>
-                <b>Laptop1</b>
-                <small>Dell Vostro 3510 15.6" </small>
-              </p>
-              <div class="counter">
-                <button class="counter-btn">+</button>
-                <div class="count">2</div>
-                <button class="counter-btn">-</button>
-              </div>
-              <div class="price">
-                <div class="amount">$2.99</div>
-                <button class="save"><u>Save for later</u></button>
-                <button class="remove"><u>Remove</u></button>
-              </div>
-            </div>
+        <div class="container">
+          <div id="cart-header">
+            <h3 class="heading">Shopping Cart</h3>
+            
           </div>
-
-          <hr />
+      
+          <div id="cart-products">
+            <!-- Generated carts will be inserted here -->
+          </div>
+      
+          <!-- <hr /> -->
+      
           <div class="checkout">
             <div class="total">
               <div>
-                <div class="Subtotal">Sub-Total</div>
-                <div class="items">2 items</div>
+                <div class="subtotal"></div>
+                <div class="items"></div>
               </div>
-              <div class="total-amount">$6.18</div>
+              <div class="total-amount" id="total"></div>
             </div>
             <button class="checkout-btn">Checkout</button>
           </div>
+        </div>
+      </section>
 
-          
-      </div>
-    </section>
-  </body>
+    <script src="js/Cart.js"></script>
+    
+
+</body>
 </html>

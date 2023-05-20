@@ -124,7 +124,7 @@ for (var i = 0; i < navLinks.length; i++) {
 
 // Initialize cart array
 
-var cartItems = JSON.parse(localStorage.getItem('carts')) || [];
+var cartItems = JSON.parse(localStorage.getItem('data')) || [];
 // Fetch data from the API
 fetch(apiUrl)
   .then(response => response.json())
@@ -171,7 +171,8 @@ fetch(apiUrl)
           category: category,
           picture: picture,
           description: description,
-          price: price
+          price: price,
+          quantity:1
         };
         addToCart(product);
       });
