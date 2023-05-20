@@ -264,10 +264,10 @@ body {
 
 
 .mission{
-  
+  text-align: center;
   margin: 2em auto;
-  margin-bottom: 0;
-  padding: 50px;
+  margin-bottom: 25px;
+  padding: 10px;
   width: 60%;
   background-color: #fff;
   border-radius: 1%;
