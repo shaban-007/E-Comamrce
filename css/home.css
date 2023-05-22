@@ -387,6 +387,7 @@ button {
 
 
 
+
   footer {
     background-color: #993266;
     padding: 20px;
@@ -418,3 +419,45 @@ button {
     margin-right: 5px;
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .cart-counter {
+    display: inline-block;
+    background-color: rgb(191, 1, 216);
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }

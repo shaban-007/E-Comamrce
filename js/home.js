@@ -1,3 +1,32 @@
+const cartCounter = document.getElementById('cartCounter');
+var ProductInCart = JSON.parse(localStorage.getItem("data"))
+if (ProductInCart.length === 0) {
+  cartCounter.style.display = 'none';
+} else {
+  cartCounter.style.display = 'inline-block';
+}
+cartCounter.textContent = ProductInCart.length;
+
+
+
+
+function updateCartCounter() {
+
+var ProductInCart = JSON.parse(localStorage.getItem("data"))
+// Update the counter value
+
+cartCounter.textContent = ProductInCart.length;
+if (ProductInCart.length === 0) {
+  cartCounter.style.display = 'none';
+} else {
+  cartCounter.style.display = 'inline-block';
+}
+
+}
+
+
+
+
 // var util = {
 //   mobileMenu() {
 //     $("#nav").toggleClass("nav-visible");
@@ -175,6 +204,7 @@ fetch(apiUrl)
           quantity:1
         };
         addToCart(product);
+        updateCartCounter();
       });
 
       // Append the cart to the current row
@@ -242,3 +272,15 @@ function addToCart(product) {
       nameContainer.textContent = storedRegistrationDataJSON[storedUserNumDataJSON].username;
 
 
+
+
+
+
+
+
+
+
+
+// Update the counter value
+
+ 

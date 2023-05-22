@@ -133,3 +133,33 @@ function addToCart(product) {
 total1();
   // Initial generation of cart items
   generateCartItems();
+
+
+
+
+
+
+  // Get the cart counter element
+const cartCounter = document.getElementById('cartCounter');
+
+// Update the counter value
+
+  cartCounter.textContent = ProductInCart.length;
+  if (ProductInCart.length === 0) {
+    cartCounter.style.display = 'none';
+  } else {
+    cartCounter.style.display = 'inline-block';
+  }
+
+
+// // Example of adding an item to the cart
+// function addToCart(product) {
+//   ProductInCart.push(product);
+//   updateCartCounter();
+// }
+
+// // Example of removing an item from the cart
+// function removeFromCart(index) {
+//   ProductInCart.splice(index, 1);
+//   updateCartCounter();
+// }

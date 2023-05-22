@@ -61,3 +61,21 @@ var nameContainer = document.getElementById("name-container");
 
 
 nameContainer.textContent = storedRegistrationDataJSON[storedUserNumDataJSON].username;
+
+
+
+
+var ProductInCart = JSON.parse(localStorage.getItem("data"))
+
+
+
+const cartCounter = document.getElementById('cartCounter');
+
+// Update the counter value
+
+  cartCounter.textContent = ProductInCart.length;
+  if (ProductInCart.length === 0) {
+    cartCounter.style.display = 'none';
+  } else {
+    cartCounter.style.display = 'inline-block';
+  }

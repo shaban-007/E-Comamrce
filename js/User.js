@@ -51,6 +51,20 @@ nameContainer.textContent = storedRegistrationDataJSON[storedUserNumDataJSON].us
     function out(){
 
         window.location.href = "login.html";
-
-
     }
+
+
+
+
+    var ProductInCart = JSON.parse(localStorage.getItem("data"))
+
+    const cartCounter = document.getElementById('cartCounter');
+
+// Update the counter value
+
+  cartCounter.textContent = ProductInCart.length;
+  if (ProductInCart.length === 0) {
+    cartCounter.style.display = 'none';
+  } else {
+    cartCounter.style.display = 'inline-block';
+  }
