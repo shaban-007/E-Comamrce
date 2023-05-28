@@ -183,31 +183,25 @@ body {
 
 
 
-
-
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
   .about-section {
     padding: 50px;
     text-align: center;
-    
     color: white;
-  }
-
-  
-
-
-
-
-  *, *:before, *:after {
-    box-sizing: inherit;
   }
   
   .column {
-    margin-left: 15%;
     justify-items: center;
-    float: left;
     width: 25%;
     margin-bottom: 16px;
+    margin-left: 230px;
     padding: 0 8px;
+    float: left;
   }
   
   .card {
@@ -215,18 +209,12 @@ body {
     margin: 8px;
   }
   
-  .about-section {
-    padding: 50px;
-    text-align: center;
-    
-    color: white;
-  }
-  
   .container {
     padding: 0 16px;
   }
   
-  .container::after, .row::after {
+  .container::after,
+  .row::after {
     content: "";
     clear: both;
     display: table;
@@ -234,7 +222,7 @@ body {
   
   .title {
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #fff;
   }
   
   .button {
@@ -253,34 +241,16 @@ body {
     background-color: #555;
   }
   
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: block;
-    }
+  .mission {
+    text-align: center;
+    margin: 2em auto;
+    margin-bottom: 25px;
+    padding: 10px;
+    width: 60%;
+    background-color: #fff;
+    border-radius: 1%;
   }
-
-
-
-
-.mission{
-  text-align: center;
-  margin: 2em auto;
-  margin-bottom: 25px;
-  padding: 10px;
-  width: 60%;
-  background-color: #fff;
-  border-radius: 1%;
   
-}
-
-
-
-
-
-  
-
-
   footer {
     background-color: #464545;
     padding: 20px;
@@ -312,36 +282,46 @@ body {
     margin-right: 5px;
   }
   
-
-
-
-
-
   section {
-    
-   
     padding: 20px;
-    width: 1000px;
-    margin-left: 300px;
+    max-width: 1000px;
+    margin: 0 auto;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-
-
-
-
-
-  .cart-counter {
-    display: inline-block;
-    background-color: rgb(191, 1, 216);
-    color: white;
-    text-align: center;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    font-size: 12px;
-    position: absolute;
-    top: 0;
-    right: 0;
+  
+  @media screen and (max-width: 768px) {
+    .column {
+      width: 50%;
+    }
+  
+    .title {
+      font-size: 24px;
+    }
+  
+    .button {
+      width: 100%;
+    }
+  
+    .mission {
+      width: 80%;
+    }
+  
+    section {
+      padding: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .column {
+      width: 100%;
+    }
+  
+    .button {
+      font-size: 14px;
+    }
+  
+    .mission {
+      width: 100%;
+    }
   }
