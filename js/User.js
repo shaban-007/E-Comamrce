@@ -62,8 +62,11 @@ nameContainer.textContent = storedRegistrationDataJSON[storedUserNumDataJSON].us
 
 // Update the counter value
 
+  if (!ProductInCart) {
+    ProductInCart = 0;
+  }
   cartCounter.textContent = ProductInCart.length;
-  if (ProductInCart.length === 0) {
+  if (ProductInCart.length === 0 || ProductInCart === 0 ) {
     cartCounter.style.display = 'none';
   } else {
     cartCounter.style.display = 'inline-block';

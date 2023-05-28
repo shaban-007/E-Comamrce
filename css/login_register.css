@@ -3,9 +3,9 @@ body {
   background: linear-gradient(to bottom, #A95ACD, #FF69B4);
   background-attachment: fixed;
   background-repeat: no-repeat;
-}
-
-form {
+  }
+  
+  form {
   width: 25%;
   border: 5px solid;
   border-radius: 10px;
@@ -17,24 +17,24 @@ form {
   transform: translate(-50%, -50%);
   display: grid;
   text-align: center;
-}
-
-form h2 {
+  }
+  
+  form h2 {
   margin-bottom: 20px;
   font-size: 50px;
   letter-spacing: 3px;
-}
-
-input {
+  }
+  
+  input {
   margin: 10px;
   width: 90%;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
-}
-
-input[type=submit] {
+  }
+  
+  input[type=submit] {
   width: 90%;
   padding: 5px;
   margin: 10px;
@@ -43,51 +43,51 @@ input[type=submit] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-input[type=submit]:hover {
+  }
+  
+  input[type=submit]:hover {
   opacity: 0.8;
-}
-
-header {
+  }
+  
+  header {
   color: #fff;
   padding: 20px;
   text-align: center;
-}
-
-header h1 {
+  }
+  
+  header h1 {
   margin: 0;
   font-size: 28px;
-}
-
-nav {
+  }
+  
+  nav {
   display: flex;
   justify-content: center;
   margin-top: 10px;
-}
-
-nav a {
+  }
+  
+  nav a {
   color: #fff;
   text-decoration: none;
   margin-right: 10px;
   transition: color 0.3s;
-}
-
-#logo {
+  }
+  
+  #logo {
   font-size: 40px;
   text-decoration: none;
   margin: auto;
-}
-
-nav a:hover {
+  }
+  
+  nav a:hover {
   color: #ffcc00;
-}
-
-section {
+  }
+  
+  section {
   height: 500px;
-}
-
-.sign-in-button {
+  }
+  
+  .sign-in-button {
   display: inline-block;
   padding: 8px 16px;
   font-size: 16px;
@@ -99,28 +99,42 @@ section {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.sign-in-button:hover {
+  }
+  
+  .sign-in-button:hover {
   background-color: #3367D6;
-}
-
-.sign-in-button:active {
+  }
+  
+  .sign-in-button:active {
   background-color: #1E40AF;
-}
-
-.sign-in-button:focus {
+  }
+  
+  .sign-in-button:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.5);
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
   form {
-    width: 80%;
+  width: 80%;
   }
-
+  
   header h1 {
-    font-size: 24px;
+  font-size: 24px;
   }
-}
+  
+  section {
+  height: auto;
+  }
+  }
+  
+  @media screen and (max-width: 480px) {
+  form {
+  width: 90%;
+  }
+  
+  form h2 {
+  font-size: 36px;
+  }
+  }
